@@ -2,9 +2,12 @@
 public class Matryoshka {
 
 	Matryoshka innerDoll;
+	String name;
+	java.awt.Color hair;
+	boolean Babushka;
 	
 	// Constructor for no innerDoll
-	public Matryoshka(){
+	public Matryoshka() {
 		innerDoll = null;
 	}
 	
@@ -26,6 +29,21 @@ public class Matryoshka {
 		}
 		// recursive case
 		return 1 + innerDoll.howManyDolls();
+	}
+	
+	public boolean Babushka() {
+		return false;
+	}
+	
+	public boolean hasBabushkas(){
+		return true;
+	} 
+	
+	public boolean howManyWearingBabushkas() {
+		if (!hasBabushkas()) {
+			return false;
+		}
+		return true;
 	}
 
 }
