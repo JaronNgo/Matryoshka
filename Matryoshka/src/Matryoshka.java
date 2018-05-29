@@ -46,4 +46,25 @@ public class Matryoshka {
 		return true;
 	}
 
+	
+	public void RedHead() {
+		hair = null;
+	}
+	
+	public void hasRedHead() {
+		hair = java.awt.Color.RED;
+	}
+	public boolean redHeadCount() {
+		if (hair == java.awt.Color.RED) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean lastName() {
+		if (!hasInnerDoll) {
+			
+		}
+		
+	}
 }
