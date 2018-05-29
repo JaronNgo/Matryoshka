@@ -48,20 +48,15 @@ public class Matryoshka {
 		return 1 + innerDoll.redHeadCount();
 	}
 	
-	public int lastName(){
+	public void lastName(){
 		if (!innerDoll.hasInnerDoll()){
-			return 1;
-		}
-		else{
-			return 1 + innerDoll.lastName();
-		}
-		int x = 1;
-		int y = 0;
-		if(String.compareTo(int)){
-			if(x.compareTo(y) == 1)
-			System.out.println(str.compareTo(innerDoll.lastName()));
-			System.out.println(innerDoll.compareTo());
+			return innerDoll.lastName(name);
 		}
 	}
-	
+	public void lastName(String end){
+		if (end.compareTo.name = 0){
+			name = end;
+			return innerDoll.lastName(name;
+		}
+	}
 }
