@@ -1,4 +1,3 @@
-
 public class Matryoshka {
 
 	Matryoshka innerDoll;
@@ -12,8 +11,11 @@ public class Matryoshka {
 	}
 	
 	// Constructor for an innerDoll
-	public Matryoshka(Matryoshka innerDoll){
+	public Matryoshka(Matryoshka innerDoll, String name, java.awt.Color hair, boolean Babushka){
 		this.innerDoll = innerDoll;
+		this.name = name;
+		this.hair = hair;
+		this.Babushka = Babushka;
 	}
 	
 	// Does this object have an inner doll.
@@ -31,40 +33,35 @@ public class Matryoshka {
 		return 1 + innerDoll.howManyDolls();
 	}
 	
-	public boolean Babushka() {
-		return false;
-	}
-	
-	public boolean hasBabushkas(){
-		return true;
-	} 
-	
-	public boolean howManyWearingBabushkas() {
-		if (!hasBabushkas()) {
-			return false;
+	public int howManyWearingBabushkas(){
+		if (!Babushka){
+			return 1; 
 		}
-		return true;
-	}
-
-	
-	public void RedHead() {
-		hair = null;
+			return 1 + innerDoll.howManyWearingBabushkas();
 	}
 	
-	public void hasRedHead() {
-		hair = java.awt.Color.RED;
-	}
-	public boolean redHeadCount() {
-		if (hair == java.awt.Color.RED) {
-			return true;
+	public int redHeadCount(){
+		if (java.awt.Color.RED == hair){
+			return 1; 
 		}
-		return false;
+		// recursive case
+		return 1 + innerDoll.redHeadCount();
 	}
 	
-	public boolean lastName() {
-		if (!hasInnerDoll) {
-			
+	public int lastName(){
+		if (!innerDoll.hasInnerDoll()){
+			return 1;
 		}
-		
+		else{
+			return 1 + innerDoll.lastName();
+		}
+		int x = 1;
+		int y = 0;
+		if(String.compareTo(int)){
+			if(x.compareTo(y) == 1)
+			System.out.println(str.compareTo(innerDoll.lastName()));
+			System.out.println(innerDoll.compareTo());
+		}
 	}
+	
 }
